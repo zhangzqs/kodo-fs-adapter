@@ -1,7 +1,7 @@
 package com.qiniu.kodo.fs.adapter.config.download;
 
 import com.qiniu.kodo.fs.adapter.config.AConfigBase;
-import com.qiniu.kodo.fs.adapter.config.IQiniuConfiguration;
+import com.qiniu.kodo.fs.adapter.util.IKVConfiguration;
 import com.qiniu.kodo.fs.adapter.config.download.cache.CacheConfig;
 
 public class DownloadConfig extends AConfigBase {
@@ -20,7 +20,7 @@ public class DownloadConfig extends AConfigBase {
     public final boolean useHttps;
     public final RandomConfig random;
 
-    public DownloadConfig(IQiniuConfiguration conf, String namespace) {
+    public DownloadConfig(IKVConfiguration conf, String namespace) {
         super(conf, namespace);
         this.cache = cache();
         this.blockSize = blockSize();

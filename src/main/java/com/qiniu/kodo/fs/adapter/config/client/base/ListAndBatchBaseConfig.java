@@ -1,13 +1,13 @@
 package com.qiniu.kodo.fs.adapter.config.client.base;
 
 import com.qiniu.kodo.fs.adapter.config.AConfigBase;
-import com.qiniu.kodo.fs.adapter.config.IQiniuConfiguration;
+import com.qiniu.kodo.fs.adapter.util.IKVConfiguration;
 
 public class ListAndBatchBaseConfig extends AConfigBase {
     public final ListProducerConfig listProducer;
     public final BatchConsumerConfig batchConsumer;
 
-    public ListAndBatchBaseConfig(IQiniuConfiguration conf, String namespace) {
+    public ListAndBatchBaseConfig(IKVConfiguration conf, String namespace) {
         super(conf, namespace);
         this.listProducer = listProducer();
         this.batchConsumer = batchConsumer();

@@ -1,13 +1,13 @@
 package com.qiniu.kodo.fs.adapter.config.download.cache;
 
 import com.qiniu.kodo.fs.adapter.config.AConfigBase;
-import com.qiniu.kodo.fs.adapter.config.IQiniuConfiguration;
+import com.qiniu.kodo.fs.adapter.util.IKVConfiguration;
 
 public class MemoryCacheConfig extends AConfigBase {
     public final boolean enable;
     public final int blocks;
 
-    public MemoryCacheConfig(IQiniuConfiguration conf, String namespace) {
+    public MemoryCacheConfig(IKVConfiguration conf, String namespace) {
         super(conf, namespace);
         this.blocks = blocks();
         this.enable = enable();

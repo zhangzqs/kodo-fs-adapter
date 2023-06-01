@@ -2,7 +2,7 @@ package com.qiniu.kodo.fs.adapter.config.customregion;
 
 import com.qiniu.kodo.fs.adapter.config.AConfigBase;
 import com.qiniu.storage.Region;
-import com.qiniu.kodo.fs.adapter.config.IQiniuConfiguration;
+import com.qiniu.kodo.fs.adapter.util.IKVConfiguration;
 import com.qiniu.kodo.fs.adapter.config.MissingConfigFieldException;
 
 public class CustomRegionConfig extends AConfigBase {
@@ -11,7 +11,7 @@ public class CustomRegionConfig extends AConfigBase {
     public final CustomRegionItemsConfig custom;
 
 
-    public CustomRegionConfig(IQiniuConfiguration conf, String namespace) {
+    public CustomRegionConfig(IKVConfiguration conf, String namespace) {
         super(conf, namespace);
         this.id = id();
         this.custom = new CustomRegionItemsConfig(conf, namespace + ".custom");

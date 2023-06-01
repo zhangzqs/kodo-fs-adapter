@@ -1,6 +1,8 @@
 package com.qiniu.kodo.fs.adapter.config;
 
 
+import com.qiniu.kodo.fs.adapter.util.IKVConfiguration;
+
 import java.net.Proxy;
 
 public class ProxyConfig extends AConfigBase {
@@ -11,7 +13,7 @@ public class ProxyConfig extends AConfigBase {
     public final String password;
     public final Proxy.Type type;
 
-    public ProxyConfig(IQiniuConfiguration conf, String namespace) {
+    public ProxyConfig(IKVConfiguration conf, String namespace) {
         super(conf, namespace);
         this.enable = enable();
         this.hostname = hostname();

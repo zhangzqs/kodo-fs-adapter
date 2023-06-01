@@ -1,13 +1,13 @@
 package com.qiniu.kodo.fs.adapter.config.download;
 
 import com.qiniu.kodo.fs.adapter.config.AConfigBase;
-import com.qiniu.kodo.fs.adapter.config.IQiniuConfiguration;
+import com.qiniu.kodo.fs.adapter.util.IKVConfiguration;
 
 public class SignConfig extends AConfigBase {
     public final boolean enable;
     public final int expires;
 
-    public SignConfig(IQiniuConfiguration conf, String namespace) {
+    public SignConfig(IKVConfiguration conf, String namespace) {
         super(conf, namespace);
         this.enable = enable();
         this.expires = expires();

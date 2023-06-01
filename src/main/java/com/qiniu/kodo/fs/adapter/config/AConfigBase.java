@@ -1,14 +1,16 @@
 package com.qiniu.kodo.fs.adapter.config;
 
+import com.qiniu.kodo.fs.adapter.util.IKVConfiguration;
+
 import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
 
 public abstract class AConfigBase {
-    protected final IQiniuConfiguration conf;
+    protected final IKVConfiguration conf;
     protected final String namespace;
 
-    public AConfigBase(IQiniuConfiguration conf, String namespace) {
+    public AConfigBase(IKVConfiguration conf, String namespace) {
         this.conf = conf;
         this.namespace = namespace;
     }

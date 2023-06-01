@@ -4,7 +4,7 @@ import com.qiniu.kodo.fs.adapter.client.IQiniuKodoClient;
 import com.qiniu.kodo.fs.adapter.client.QiniuKodoCachedClient;
 import com.qiniu.kodo.fs.adapter.client.QiniuKodoClient;
 import com.qiniu.kodo.fs.adapter.client.QiniuKodoFileInfo;
-import com.qiniu.kodo.fs.adapter.config.IQiniuConfiguration;
+import com.qiniu.kodo.fs.adapter.util.IKVConfiguration;
 import com.qiniu.kodo.fs.adapter.config.QiniuKodoFsConfig;
 import com.qiniu.kodo.fs.adapter.download.EmptyInputStream;
 import com.qiniu.kodo.fs.adapter.download.QiniuKodoInputStream;
@@ -38,7 +38,7 @@ public class QiniuKodoFileSystem implements IQiniuKodoFileSystem {
     private final QiniuKodoRandomBlockReader randomBlockReader;
     private ExecutorService uploadExecutorService;
 
-    public QiniuKodoFileSystem(String bucket, IQiniuConfiguration conf) throws IOException {
+    public QiniuKodoFileSystem(String bucket, IKVConfiguration conf) throws IOException {
         LOG.debug("initialize QiniuKodoFileSystem with bucket: {}", bucket);
         this.fsConfig = new QiniuKodoFsConfig(conf);
 

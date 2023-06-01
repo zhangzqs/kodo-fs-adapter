@@ -1,7 +1,7 @@
 package com.qiniu.kodo.fs.adapter.config.client.base;
 
 import com.qiniu.kodo.fs.adapter.config.AConfigBase;
-import com.qiniu.kodo.fs.adapter.config.IQiniuConfiguration;
+import com.qiniu.kodo.fs.adapter.util.IKVConfiguration;
 
 public class ListProducerConfig extends AConfigBase {
     public final boolean useListV2;
@@ -9,7 +9,7 @@ public class ListProducerConfig extends AConfigBase {
     public final int bufferSize;
     public final int offerTimeout;
 
-    public ListProducerConfig(IQiniuConfiguration conf, String namespace) {
+    public ListProducerConfig(IKVConfiguration conf, String namespace) {
         super(conf, namespace);
         this.useListV2 = useListV2();
         this.singleRequestLimit = singleRequestLimit();

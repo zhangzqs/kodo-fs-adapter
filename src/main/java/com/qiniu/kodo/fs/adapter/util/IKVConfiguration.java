@@ -1,6 +1,6 @@
-package com.qiniu.kodo.fs.adapter.config;
+package com.qiniu.kodo.fs.adapter.util;
 
-public interface IQiniuConfiguration {
+public interface IKVConfiguration {
     String get(String key, String defaultValue);
 
     default String get(String key) {

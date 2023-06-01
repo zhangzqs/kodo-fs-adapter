@@ -5,6 +5,7 @@ import com.qiniu.kodo.fs.adapter.config.client.ClientConfig;
 import com.qiniu.kodo.fs.adapter.config.customregion.CustomRegionConfig;
 import com.qiniu.kodo.fs.adapter.config.download.DownloadConfig;
 import com.qiniu.kodo.fs.adapter.config.upload.UploadConfig;
+import com.qiniu.kodo.fs.adapter.util.IKVConfiguration;
 
 public class QiniuKodoFsConfig extends AConfigBase {
     public final AuthConfig auth;
@@ -17,7 +18,7 @@ public class QiniuKodoFsConfig extends AConfigBase {
     public final boolean useHttps;
     public final LoggerConfig logger;
 
-    public QiniuKodoFsConfig(IQiniuConfiguration conf, String namespace) {
+    public QiniuKodoFsConfig(IKVConfiguration conf, String namespace) {
         super(conf, namespace);
         this.customRegion = region();
         this.auth = auth();
@@ -29,7 +30,7 @@ public class QiniuKodoFsConfig extends AConfigBase {
         this.logger = logger();
     }
 
-    public QiniuKodoFsConfig(IQiniuConfiguration conf) {
+    public QiniuKodoFsConfig(IKVConfiguration conf) {
         this(conf, "fs.qiniu");
     }
 

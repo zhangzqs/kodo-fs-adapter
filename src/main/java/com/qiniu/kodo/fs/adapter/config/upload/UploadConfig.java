@@ -1,7 +1,7 @@
 package com.qiniu.kodo.fs.adapter.config.upload;
 
 import com.qiniu.kodo.fs.adapter.config.AConfigBase;
-import com.qiniu.kodo.fs.adapter.config.IQiniuConfiguration;
+import com.qiniu.kodo.fs.adapter.util.IKVConfiguration;
 
 public class UploadConfig extends AConfigBase {
     public final SignConfig sign;
@@ -13,7 +13,7 @@ public class UploadConfig extends AConfigBase {
     public final V2Config v2;
     public final int bufferSize;
 
-    public UploadConfig(IQiniuConfiguration conf, String namespace) {
+    public UploadConfig(IKVConfiguration conf, String namespace) {
         super(conf, namespace);
         this.sign = sign();
         this.maxConcurrentUploadFiles = maxConcurrentUploadFiles();

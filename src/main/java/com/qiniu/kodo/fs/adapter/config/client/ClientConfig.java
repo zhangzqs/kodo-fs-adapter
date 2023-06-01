@@ -1,7 +1,7 @@
 package com.qiniu.kodo.fs.adapter.config.client;
 
 import com.qiniu.kodo.fs.adapter.config.AConfigBase;
-import com.qiniu.kodo.fs.adapter.config.IQiniuConfiguration;
+import com.qiniu.kodo.fs.adapter.util.IKVConfiguration;
 import com.qiniu.kodo.fs.adapter.config.client.base.ListProducerConfig;
 
 public class ClientConfig extends AConfigBase {
@@ -12,7 +12,7 @@ public class ClientConfig extends AConfigBase {
     public final DeleteConfig delete;
     public final RenameConfig rename;
 
-    public ClientConfig(IQiniuConfiguration conf, String namespace) {
+    public ClientConfig(IKVConfiguration conf, String namespace) {
         super(conf, namespace);
         this.cache = cache();
         this.list = list();

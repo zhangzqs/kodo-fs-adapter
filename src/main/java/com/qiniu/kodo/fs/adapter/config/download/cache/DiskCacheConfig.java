@@ -1,7 +1,7 @@
 package com.qiniu.kodo.fs.adapter.config.download.cache;
 
 import com.qiniu.kodo.fs.adapter.config.AConfigBase;
-import com.qiniu.kodo.fs.adapter.config.IQiniuConfiguration;
+import com.qiniu.kodo.fs.adapter.util.IKVConfiguration;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -12,7 +12,7 @@ public class DiskCacheConfig extends AConfigBase {
     public final Path dir;
     public final int expires;
 
-    public DiskCacheConfig(IQiniuConfiguration conf, String namespace) {
+    public DiskCacheConfig(IKVConfiguration conf, String namespace) {
         super(conf, namespace);
         this.enable = enable();
         this.blocks = blocks();

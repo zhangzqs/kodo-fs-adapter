@@ -1,7 +1,7 @@
 package com.qiniu.kodo.fs.adapter.config.client.base;
 
 import com.qiniu.kodo.fs.adapter.config.AConfigBase;
-import com.qiniu.kodo.fs.adapter.config.IQiniuConfiguration;
+import com.qiniu.kodo.fs.adapter.util.IKVConfiguration;
 
 public class BatchConsumerConfig extends AConfigBase {
 
@@ -10,7 +10,7 @@ public class BatchConsumerConfig extends AConfigBase {
     public final int singleBatchRequestLimit;
     public final int pollTimeout;
 
-    public BatchConsumerConfig(IQiniuConfiguration conf, String namespace) {
+    public BatchConsumerConfig(IKVConfiguration conf, String namespace) {
         super(conf, namespace);
         this.bufferSize = bufferSize();
         this.count = count();

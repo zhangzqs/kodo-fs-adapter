@@ -1,12 +1,12 @@
 package com.qiniu.kodo.fs.adapter.config.upload;
 
 import com.qiniu.kodo.fs.adapter.config.AConfigBase;
-import com.qiniu.kodo.fs.adapter.config.IQiniuConfiguration;
+import com.qiniu.kodo.fs.adapter.util.IKVConfiguration;
 
 public class SignConfig extends AConfigBase {
     public final int expires;
 
-    public SignConfig(IQiniuConfiguration conf, String namespace) {
+    public SignConfig(IKVConfiguration conf, String namespace) {
         super(conf, namespace);
         this.expires = expires();
     }

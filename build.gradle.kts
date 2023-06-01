@@ -2,7 +2,7 @@ plugins {
     id("java")
 }
 
-group = "org.example"
+group = "com.qiniu.kodo.fs.adapter"
 version = "1.0-SNAPSHOT"
 
 repositories {
